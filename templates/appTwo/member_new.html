@@ -1,0 +1,155 @@
+
+
+
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Organiser Form</title>
+<link rel="icon" href="{% static "img/technohub.png" %}" sizes="1000x1000">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!-- styles -->
+<link rel="stylesheet" href="{% static "css/fancybox/jquery.fancybox.css" %}">
+<link href="{% static "css/bootstrap.css" %}" rel="stylesheet" />
+<link href="{% static "css/bootstrap-theme.css" %}" rel="stylesheet" />
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css">
+
+<link rel="stylesheet" href="{% static "css/slippry.css" %}">
+<link href="{% static "css/style.css" %}" rel="stylesheet" />
+<link rel="stylesheet" href="{% static "color/default.css" %}">
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css">
+
+<script src="{% static "js/modernizr.custom.js" %}"></script>
+
+<style>
+	.boxed {
+	  border: 10px solid green ;
+	  background-color:#F1F1F1;
+	  height:auto;
+	  width:auto;
+	}
+	body  {
+    background-image: url("img/3.jpg");
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+    }
+</style>
+</head>
+<body>
+
+<script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+<script src="js/bootstrap.js"></script>
+
+
+  <nav class="navbar navbar-inverse navbar-static-top" >
+    <div class="container-fluid">
+
+
+
+        <li><a class="navbar-brand" style="margin-left:50px" href="{% url 'home' %}"><img src="{% static "img/technohub.jpeg"%}" style="height:40px;width:70px" ></a></li>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav" style="hieght:200px">
+        <li><a class="navbar-link" style="margin-left:30px" href="{% url 'home' %}">Home</a></li>
+        <li><a class="navbar-link" href="{% url 'selected_users_new' %}">Organising Team</a></li>
+
+        <li><a class="navbar-link" href="{% url 'selected_users' %}">Technical Team</a></li>
+        <li><a class="navbar-link" href="{% url 'work' %}">Work</a></li>
+        <li><a class="navbar-link" href="{% url 'about' %}">About</a></li>
+        <li><a class="navbar-link" href="{% url 'email' %}">Contact Us</a></li>
+
+
+        </ul>
+
+    </div>
+
+
+    </div>
+
+  </nav>
+<div class="col-lg-4 col-lg-offset-4">
+<br><br>
+<div class="boxed" style="margin-bottom:35px">
+	<div class="container-fluid">
+    <h1>Become organising team-member of TechnoHub!</h1>
+      <form method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" class='btn btn-primary' value="Submit">
+
+      </form><br>
+
+
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</footer>
+<a href="#" class="scrollup"><i class="fa fa-angle-up fa-2x"></i></a>
+<!-- javascript -->
+<script src="{% static "js/jquery-1.9.1.min.js" %}"></script>
+<script src="{% static "js/jquery.easing.js" %}"></script>
+<script src="{% static "js/classie.js" %}"></script>
+<script src="{% static "js/bootstrap.js" %}"></script>
+<script src="{% static "js/slippry.min.js" %}"></script>
+<script src="{% static "js/nagging-menu.js" %}"></script>
+<script src="{% static "js/jquery.nav.js" %}"></script>
+<script src="{% static "js/jquery.scrollTo.js" %}"></script>
+<script src="{% static "js/jquery.fancybox.pack.js" %}"></script>
+<script src="{% static "js/jquery.fancybox-media.js" %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+<script src="{% static "js/masonry.pkgd.min.js" %}"></script>
+<script src="{% static "js/imagesloaded.js" %}"></script>
+<script src="{% static "js/jquery.nicescroll.min.js" %}"></script>
+<script src="{% static "js/validate.js" %}"></script>
+<script src="{% static "js/AnimOnScroll.js" %}"></script>
+    <script>
+        new AnimOnScroll( document.getElementById( 'grid' ), {
+            minDuration : 0.4,
+            maxDuration : 0.7,
+            viewportFactor : 0.2
+        } );
+    </script>
+<script>
+	$(document).ready(function(){
+	  $('#slippry-slider').slippry(
+		defaults = {
+			transition: 'vertical',
+			useCSS: true,
+			speed: 3000,
+			pause: 3000,
+			initSingle: false,
+			auto: true,
+			preload: 'visible',
+			pager: false,
+		}
+
+	  )
+	});
+</script>
+
+<script src="{% static "js/custom.js" %}"></script>
+
+</body>
+</html>

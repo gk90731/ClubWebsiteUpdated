@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Works</title>
+<link rel="icon" href="{% static "img/technohub.png" %}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!-- styles -->
+
+<link rel="stylesheet" href="{% static "css/fancybox/jquery.fancybox.css" %}">
+<link href="{% static "css/bootstrap.css" %}" rel="stylesheet" />
+<link href="{% static "css/bootstrap-theme.css" %}" rel="stylesheet" />
+<link rel="stylesheet" href="{% static "css/slippry.css" %}">
+<link href="{% static "css/style.css" %}" rel="stylesheet" />
+<link rel="stylesheet" href="{% static "color/default.css" %}">
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<script src="{% static "js/modernizr.custom.js" %}"></script>
+<style>
+	.boxed {
+	  border: 10px solid green ;
+	  background-color:#F1F1F1;
+	  height:auto;
+	  width:auto;
+	}
+	body  {
+    background-image: url("img/3.jpg");
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+    }
+</style>
+</head>
+<body>
+
+
+    <div class="modal" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="myModalLabel" style="text-align: center;">THIS PROBLEM STATEMENT BROUGHT TO YOU BY</h3><h2 style="text-align: center;">APD</h2>
+          </div>
+          <div class="modal-body" >
+            <ul>
+                <li>Send your idea from <a href="http://technohubbit.pythonanywhere.com/email/">contact us</a> section with all your team information.</li>
+                <li>If your idea get selected funding will be provided by APD</li>
+            </ul>
+          </div>
+          <div class="modal-footer" >
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <nav class="navbar navbar-inverse navbar-static-top" >
+    <div class="container-fluid">
+
+
+
+        <li><a class="navbar-brand" style="margin-left:50px" href="{% url 'home' %}"><img src="{% static "img/technohub.jpeg"%}" style="height:40px;width:70px" ></a></li>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav" style="hieght:200px">
+        <li><a class="navbar-link" style="margin-left:30px" href="{% url 'home' %}">Home</a></li>
+        <li><a class="navbar-link" href="{% url 'selected_users_new' %}">Organising Team</a></li>
+
+        <li><a class="navbar-link" href="{% url 'selected_users' %}">Technical Team</a></li>
+        <li><a class="navbar-link" href="{% url 'work' %}">Work</a></li>
+        <li><a class="navbar-link" href="{% url 'about' %}">About</a></li>
+        <li><a class="navbar-link" href="{% url 'email' %}">Contact Us</a></li>
+
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'bypass' %}"><span class="glyphicon glyphicon-log-in"></span> Get Registered at TechnoHub</a></li> &nbsp&nbsp
+        </ul>
+    </div>
+
+
+    </div>
+
+  </nav>
+<div class="col-lg-4 col-lg-offset-4">
+<br><br>
+<div class="boxed" style="margin-bottom:35px">
+	<div class="container-fluid">
+
+		<h3>COMPLETED PROJECTS:</h3>
+        <p><a href="{% url 'completed_projects' %}" target="_blank">Click Here!</a>to see completed projects and all info.</p>
+        <h3>PROCESSING PROJECTS:</h3>
+        <p><a href="#">Click Here!</a>to see processing projects and all info.</p>
+        <h3>PROBLEM STATEMENT:</h3>
+        <p>>>  Develop a drone which can lift upto 8kg of weight add spray mechanism on it and the flight time must exceed by 20 minutes.&nbsp <a data-toggle="modal" href="#basicModal">More Detail</a>
+        </p>
+
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</footer>
+<a href="#" class="scrollup"><i class="fa fa-angle-up fa-2x"></i></a>
+<!-- javascript -->
+
+    <script>
+        new AnimOnScroll( document.getElementById( 'grid' ), {
+            minDuration : 0.4,
+            maxDuration : 0.7,
+            viewportFactor : 0.2
+        } );
+    </script>
+
+
+<script src="{% static "js/custom.js" %}"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+{% load static %}
+<HTML>
+  <head>
+    <title>Result</title>
+    <link rel="icon" href="{% static "img/technohub.png" %}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+    div.a {
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+        <div class="jumbotron" class = "a">
+            <p>Correct : {{user_list_newre}}<br>
+              Unattempted : {{user_list_newrf}}<br>
+              Wrong : {{user_list_newrg}}<br>
+              Marks obtained : {{user_list_newrh}}<br>
+            </p>
+            <p><a href = "http://technohubbit.pythonanywhere.com/">click here</a> to go to home page.</p>
+        </div>
+    <div>
+
+  </p>
+  </body>
+</HTML>

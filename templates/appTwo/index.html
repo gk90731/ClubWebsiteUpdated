@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>TechnoHub</title>
+  <link rel="icon" href="{% static "img/technohub.png" %}">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!-- styles -->
+
+<link rel="stylesheet" href="{% static "css/fancybox/jquery.fancybox.css" %}">
+<link href="{% static "css/bootstrap.css" %}" rel="stylesheet" />
+<link href="{% static "css/bootstrap-theme.css" %}" rel="stylesheet" />
+<link rel="stylesheet" href="{% static "css/slippry.css" %}">
+<link href="{% static "css/style.css" %}" rel="stylesheet" />
+<link rel="stylesheet" href="{% static "color/default.css" %}">
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<script src="{% static "js/modernizr.custom.js" %}"></script>
+<style>
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<div class="modal" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="myModalLabel" style="text-align: center;">NOTICE</h2>
+          </div>
+          <div class="modal-body" style="text-align: center">
+            <h3>TechnoHub released its first problem statement.Please check it out from <a href = "http://technohubbit.pythonanywhere.com/work/">work section</a></h3>
+          </div>
+          <div class="modal-footer" >
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script>
+  $(document).ready(function() {
+  setTimeout(function() {
+    $("#basicModal").trigger('click');
+  }, 0000);
+  });
+  $(window).on('load',function(){setTimeout(function() {
+  $('#basicModal').modal('show');
+  }, 1000);
+
+  });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <nav class="navbar navbar-inverse navbar-static-top" >
+    <div class="container-fluid">
+
+
+
+        <li><a class="navbar-brand" style="margin-left:50px" href="{% url 'home' %}"><img src="{% static "img/technohub.jpeg"%}" style="height:40px;width:70px" ></a></li>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav" style="hieght:200px">
+        <li><a class="navbar-link" style="margin-left:30px" href="{% url 'home' %}">Home</a></li>
+        <li><a class="navbar-link" href="{% url 'selected_users_new' %}">Organising Team</a></li>
+        <li><a class="navbar-link" href="{% url 'selected_users' %}">Technical Team</a></li>
+        <li><a class="navbar-link" href="{% url 'work' %}">Work</a></li>
+        <li><a class="navbar-link" href="{% url 'about' %}">About</a></li>
+        <li><a class="navbar-link" href="{% url 'email' %}">Contact Us</a></li>
+        <li><a class="navbar-link" href="{% url 'studentForm' %}">Take an aptitude demo-test by TechnoHub </a></li>
+
+        </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'bypass' %}"><span class="glyphicon glyphicon-log-in"></span> Get Registered at TechnoHub</a></li> &nbsp&nbsp
+      </ul>
+    </div>
+
+
+    </div>
+
+  </nav>
+
+
+  <div class="container">
+    {% block body_block %}
+    <!--Anything outside of this will be inherited if you extend!-->
+    {% endblock %}
+
+
+  </div>
+
+<!--slider-------------------------------------------------------------------------------------------------------->
+
+<div class="container">
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <!--<ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>-->
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <h2><center>Welcome to TechnoHub</center></h2>
+        <img src="{% static "img/1.jpg" %}" alt="Welcome to TechnoHub!" style="width:150%;">
+      </div>
+
+      <div class="item">
+        <h2><center>Welcome to TechnoHub</center></h2>
+        <img src="{% static "img/3.jpg" %}"  alt="Welcome to TechnoHub!" style="width:150%;">
+      </div>
+
+      <div class="item">
+        <h2><center>Welcome to TechnoHub</center></h2>
+        <img src="{% static "img/2.jpg" %}" alt="Welcome to TechnoHub!" style="width:150%;">
+      </div>
+
+
+      <marquee width="100%" direction="left" >
+      <h4>ANNOUNCEMENT:   Please collect your participation certificate of TECH-EXPO by calling on 8434986336</h4>
+      </marquee>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+
+<!-- Section about -->
+<section id="about" class="section">
+<div class="container">
+	<div class="row">
+	   <div class="col-md-8 col-md-offset-2">
+			<div class="heading">
+
+				<h1 style="color:#5C9F24;style="font-size:60px""><span>ABOUT CLUB:</span></h1>
+			</div>
+			<div class="sub-heading">
+				<p style="font-size:30px">
+					 Providing a platform to discuss projects and build.<br><br>Under guidance of:
+				</p>
+			</div>
+	   </div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+                </div>
+            <div class="col-md-4">
+                <a target="_blank" href="http://www.bitdurg.ac.in/faculty-details.php?fcid=108"><img src="{% static "img/hod mam.jpg" %}" style="height:200px;width:100%" alt="Cinque Terre" class="img-responsive img-circle" title="Dr. Manisha Sharma mam"/></a>
+                <h5 style="font-size:20px"><strong>Dr. Manisha Sharma mam</strong></h5>
+                <p style="font-size:17px">
+          Professor & HOD(Department Of Electronics And Telecommunication)
+        </p>
+
+                </div>
+            <div class="col-md-4">
+                </div>
+        </div>
+</section>
+</body>
+</html>
+<!-- end section about -->
+
+
+
+
+
+
+<!--CLUB supports-->
+    <section id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Club Supports</h2>
+
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm-3">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+              <i class="fa fa-android fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">App & Software Development</h4>
+
+          </div>
+          <div class="col-sm-3">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+              <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">Web development</h4>
+
+          </div>
+          <div class="col-sm-3">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+              <i class="fa fa-dashboard fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">PCB hardware Projects</h4>
+
+          </div>
+          <div class="col-sm-3">
+            <span class="fa-stack fa-4x">
+              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+              <i class="fa fa-mobile-phone fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">Embedded Projects</h4>
+
+          </div>
+        </div>
+      </div>
+    </section>
+<!--CLUB supports end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- section contact -->
+<section id="contact" class="section">
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<div class="heading">
+				<h3><span>Get in touch</span></h3>
+			</div>
+			<div class="sub-heading">
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+	    <div class="col-md-8 col-md-offset-2">
+			<div class="sub-heading">
+				<h1 style="style="font-size:60px""><span>Contact form</span></h1><br><br>
+				<p>
+				Want to work with us or just want to say hello? Don't hesitate to get in touch!
+    			</p><br>
+    			<form action="{% url 'email' %}">
+                <input type="submit" value="Go to Contact Form" />
+                </form>
+			</div>
+		</div>
+		<div class="col-md-8 col-md-offset-2">
+
+        </div>
+	</div>
+</div>
+</section>
+<!-- end section contact -->
+<footer>
+<div class="verybottom">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="aligncenter">
+                <ul class="social-network social-circle">
+
+                    <li><a href="https://www.facebook.com/bit.technohub/?ti=as" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="bit.technohub@gmail.com" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+
+                </ul>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="aligncenter">
+					<p>
+						 &copy;2018 TechnoHub - All right reserved to TechnoHub Club | Designed by <a target="_blank" href="https://www.facebook.com/profile.php?id=100008171100736">Kumar Gaurav</a>.
+					</p>
+                    <!--
+                        All links in the footer should remain intact.
+                        Licenseing information is available at: http://bootstraptaste.com/license/
+                        You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Groovin
+                    -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</footer>
+<a href="#" class="scrollup"><i class="fa fa-angle-up fa-2x"></i></a>
+<!-- javascript -->
+
+    <script>
+        new AnimOnScroll( document.getElementById( 'grid' ), {
+            minDuration : 0.4,
+            maxDuration : 0.7,
+            viewportFactor : 0.2
+        } );
+
+
+        $('.myCarousel').slick({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          fade: true,
+          cssEase: 'linear'
+        });
+
+    </script>
+
+
+<script src="{% static "js/custom.js" %}"></script>
+        <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 11,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+                    // How you would like to style the map.
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [	{		featureType:"all",		elementType:"all",		stylers:[		{			invert_lightness:true		},		{			saturation:10		},		{			lightness:30		},		{			gamma:0.5		},		{			hue:"#5C9F24"		}		]	}	]
+                };
+
+                // Get the HTML DOM element that will contain your map
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using out element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+            }
+        </script>
+</body>
+</html>

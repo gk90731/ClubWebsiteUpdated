@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Staffpannel tech</title>
+
+  <link rel="icon" href="{% static "img/technohub.png" %}" sizes="1000x1000">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <!-- styles -->
+
+  <link rel="stylesheet" href="{% static "css/fancybox/jquery.fancybox.css" %}">
+  <link href="{% static "css/bootstrap.css" %}" rel="stylesheet" />
+  <link href="{% static "css/bootstrap-theme.css" %}" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static "css/slippry.css" %}">
+  <link href="{% static "css/style.css" %}" rel="stylesheet" />
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css">
+
+  <link rel="stylesheet" href="{% static "color/default.css" %}">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  <script src="{% static "js/modernizr.custom.js" %}"></script>
+<body>
+  <nav class="navbar navbar-inverse navbar-static-top" >
+    <div class="container-fluid">
+
+
+
+        <li><a class="navbar-brand" style="margin-left:50px" href="{% url 'home' %}"><img src="{% static "img/technohub.jpeg"%}" style="height:40px;width:70px" ></a></li>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav" style="hieght:200px">
+        <li><a class="navbar-link" style="margin-left:30px" href="{% url 'home' %}">Home</a></li>
+        <li><a class="navbar-link" href="{% url 'selected_users_new' %}">Organising Team</a></li>
+
+        <li><a class="navbar-link" href="{% url 'selected_users' %}">Technical Team</a></li>
+        <li><a class="navbar-link" href="{% url 'work' %}">Work</a></li>
+        <li><a class="navbar-link" href="{% url 'about' %}">About</a></li>
+        <li><a class="navbar-link" href="{% url 'email' %}">Contact Us</a></li>
+
+
+        </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'bypass' %}"><span class="glyphicon glyphicon-log-in"></span> Get Registered at TechnoHub</a></li> &nbsp&nbsp
+      </ul>
+    </div>
+
+
+    </div>
+
+  </nav>
+
+<div class="container">
+	<br><br>
+  <h2>TECHNICAL TEAM:</h2>
+
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Contact</th>
+        <th>Email</th>
+        <th>Branch</th>
+        <th>Semester</th>
+        <th>Skills:</th>
+        <th>Also interested in:</th>
+        <th>Workshop Attended:</th>
+
+
+      </tr>
+    </thead>
+
+    {% if tech_team %}
+    <tbody>
+      {% for person in tech_team %}
+      <tr>
+        <td>{{person.first_name}}</td>
+        <td>{{person.contact}}</td>
+        <td>{{person.email}}</td>
+        <td>{{person.branch}}</td>
+        <td>{{person.semester}}</td>
+        <td>{{person.skills}}</td>
+        <td>{{person.interest}}</td>
+        <td>{{person.workshop}}</td>
+      {% endfor %}
+      </tr>
+    </tbody>
+
+
+
+    </table>
+    {% endif %}
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</footer>
+<a href="#" class="scrollup"><i class="fa fa-angle-up fa-2x"></i></a>
+<!-- javascript -->
+<script src="{% static "js/jquery-1.9.1.min.js" %}"></script>
+<script src="{% static "js/jquery.easing.js" %}"></script>
+<script src="{% static "js/classie.js" %}"></script>
+<script src="{% static "js/bootstrap.js" %}"></script>
+<script src="{% static "js/slippry.min.js" %}"></script>
+<script src="{% static "js/nagging-menu.js" %}"></script>
+<script src="{% static "js/jquery.nav.js" %}"></script>
+<script src="{% static "js/jquery.scrollTo.js" %}"></script>
+<script src="{% static "js/jquery.fancybox.pack.js" %}"></script>
+<script src="{% static "js/jquery.fancybox-media.js" %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+<script src="{% static "js/masonry.pkgd.min.js" %}"></script>
+<script src="{% static "js/imagesloaded.js" %}"></script>
+<script src="{% static "js/jquery.nicescroll.min.js" %}"></script>
+<script src="{% static "js/validate.js" %}"></script>
+<script src="{% static "js/AnimOnScroll.js" %}"></script>
+    <script>
+        new AnimOnScroll( document.getElementById( 'grid' ), {
+            minDuration : 0.4,
+            maxDuration : 0.7,
+            viewportFactor : 0.2
+        } );
+    </script>
+<script>
+	$(document).ready(function(){
+	  $('#slippry-slider').slippry(
+		defaults = {
+			transition: 'vertical',
+			useCSS: true,
+			speed: 3000,
+			pause: 3000,
+			initSingle: false,
+			auto: true,
+			preload: 'visible',
+			pager: false,
+		}
+
+	  )
+	});
+</script>
+
+<script src="{% static "js/custom.js" %}"></script>
+</body>
+</html>
