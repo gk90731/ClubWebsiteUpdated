@@ -30,7 +30,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'bit.technohub@gmail.com'
-EMAIL_HOST_PASSWORD = 'GStechnohub'
+EMAIL_HOST_PASSWORD = 'I have edited this for security'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
